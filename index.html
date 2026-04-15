@@ -1,101 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayan Sarkar | AI Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ayan Sarkar - AI Language Specialist | Google Gemini P13n | Bengali NLP Expert | Academic Researcher">
+  <title>Ayan Sarkar | AI Language Specialist & Researcher</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .glass { backdrop-filter: blur(12px); background: rgba(255,255,255,0.6); }
+    body { font-family: 'Inter', system_ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #1e2937 0%, #0f172a 100%); }
+    .section-header { position: relative; }
+    .section-header:after { content: ''; position: absolute; width: 60px; height: 3px; background: #6366f1; bottom: -4px; left: 0; }
+    .modal { animation: modalPop 0.3s ease-out; }
+    @keyframes modalPop { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-slate-950 text-slate-200">
 
-<!-- NAV -->
-<nav class="fixed w-full top-0 z-50 glass shadow-sm">
-  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="font-bold text-lg">Ayan Sarkar</h1>
-    <div class="space-x-6 text-sm">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+  <!-- NAVBAR -->
+  <nav class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold tracking-tighter">Ayan Sarkar</a>
+      <div class="hidden md:flex gap-8 font-medium">
+        <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
+        <a href="#research" class="hover:text-indigo-400 transition">Research</a>
+        <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+        <a href="#education" class="hover:text-indigo-400 transition">Education</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+      </div>
+      <button onclick="openContactModal()" class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-2xl font-semibold">
+        <i class="fas fa-paper-plane"></i> Get In Touch
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg py-24">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-7">
+        <div class="inline-flex items-center gap-2 bg-white/10 text-indigo-300 text-sm px-5 py-2 rounded-3xl mb-6 backdrop-blur">
+          <i class="fas fa-circle animate-pulse"></i> OPEN TO GLOBAL ROLES • REMOTE / RELOCATION
+        </div>
+        <h1 class="text-6xl md:text-7xl font-bold leading-none text-white">Ayan Sarkar</h1>
+        <p class="text-3xl text-indigo-300 mt-4">AI Language Specialist • Google Gemini (P13n) • Bengali NLP Expert</p>
+        <p class="mt-8 text-xl text-slate-300 max-w-2xl">7+ years in GenAI training, academic research, and government digital education. Published researcher. Expert in Bengali–English localization & responsible AI.</p>
+       
+        <div class="flex flex-wrap gap-4 mt-12">
+          <button onclick="openContactModal()" class="bg-white text-slate-900 px-8 py-4 rounded-3xl font-semibold flex items-center gap-3 hover:scale-105 transition-all">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </button>
+          <a href="Ayan-Sarkar-CV.pdf" target="_blank" class="border-2 border-white/70 hover:border-white px-8 py-4 rounded-3xl font-semibold flex items-center gap-3 transition-all">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="https://www.researchgate.net/profile/Ayan-Sarkar-11" target="_blank" class="flex items-center gap-3 px-5 text-3xl hover:text-indigo-400">
+            <i class="fab fa-researchgate"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 mt-16 text-sm">
+          <div><span class="text-slate-400 block">Location</span> Nadia, West Bengal, India</div>
+          <div><span class="text-slate-400 block">Availability</span> Immediate • Remote OK</div>
+          <div><span class="text-slate-400 block">Languages</span> Bengali (Native) • English (Fluent)</div>
+        </div>
+      </div>
+
+      <div class="md:col-span-5 flex justify-center">
+        <div class="w-80 h-80 rounded-3xl overflow-hidden border-8 border-indigo-400 shadow-2xl shadow-indigo-500/30">
+          <img src="avatar.jpg" alt="Ayan Sarkar - Professional Headshot" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="about">
+    <h2 class="text-4xl font-bold mb-6 section-header">Professional Summary</h2>
+    <p class="text-lg leading-relaxed text-slate-300 max-w-4xl">
+      AI Language Specialist & Academic Researcher with 7+ years spanning AI/GenAI training, bilingual content engineering, field & survey research, and government-backed digital education. Currently contributing to Google Gemini Personalization (P13n) at GlobalLogic. Published researcher (ResearchGate) with hands-on expertise in survey tool design, knowledge research, and field data collection. Seeking roles in AI annotation, academic/field research, EdTech, or language localization.
+    </p>
+  </section>
+
+  <!-- EXPERIENCE - ALL DETAILS -->
+  <section class="bg-slate-900 py-20" id="experience">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 section-header">Professional Experience</h2>
+      <div class="space-y-16">
+
+        <!-- Role 1 -->
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-3 text-slate-400 font-medium">Nov 2025 – Mar 2026</div>
+          <div class="md:col-span-9">
+            <h3 class="text-2xl font-semibold">Associate Language Specialist — AI/GenAI Content Engineering</h3>
+            <p class="text-indigo-400">GlobalLogic India Pvt. Ltd. (Hitachi Group), Hyderabad — Remote</p>
+            <ul class="mt-6 space-y-3 text-slate-300 list-disc pl-5">
+              <li>Led Bengali language processing for Google Gemini Personalization (P13n)</li>
+              <li>Ensured linguistic accuracy across large-scale AI training datasets</li>
+              <li>Performed structured content analysis, annotation & quality evaluation improving AI-driven output relevance and coherence</li>
+              <li>Applied bilingual cultural expertise to localize content for Bengali-speaking segments, directly impacting AI personalization accuracy</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-3 text-slate-400 font-medium">Mar 2025 – Nov 2025</div>
+          <div class="md:col-span-9">
+            <h3 class="text-2xl font-semibold">Computer Teacher / Instructor</h3>
+            <p class="text-indigo-400">Asannagar Tech Guru Skill Computer Center, Nadia</p>
+            <ul class="mt-6 space-y-3 text-slate-300 list-disc pl-5">
+              <li>Delivered Computer Fundamentals, Advanced Excel, HTML/CSS/Python to 30+ students per batch — 85%+ first-attempt certification pass rate</li>
+              <li>Conducted soft skills workshops on professional communication, problem-solving and digital workplace readiness</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-3 text-slate-400 font-medium">May 2018 – Feb 2025</div>
+          <div class="md:col-span-9">
+            <h3 class="text-2xl font-semibold">Training Staff | Data Entry Operator | Program Support</h3>
+            <p class="text-indigo-400">AADPO / Utkarsh Bangla – PBSSD (PMGDISHA, WBSCTVESD), Nadia</p>
+            <ul class="mt-6 space-y-3 text-slate-300 list-disc pl-5">
+              <li>Delivered digital literacy, Tally GST & e-governance training to 500+ beneficiaries over 7 years under national skill missions</li>
+              <li>Managed end-to-end MIS, trainee records, certifications, and government compliance reporting with 100% accuracy</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="md:col-span-3 text-slate-400 font-medium">Jan 2020 – Present</div>
+          <div class="md:col-span-9">
+            <h3 class="text-2xl font-semibold">Freelance Digital Marketer & Content Specialist</h3>
+            <p class="text-indigo-400">Local Businesses, West Bengal</p>
+            <ul class="mt-6 space-y-3 text-slate-300 list-disc pl-5">
+              <li>Built 10+ Shopify websites</li>
+              <li>Executed Meta & Google Ads campaigns achieving up to 3× audience engagement growth for SME clients</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH - FULL DETAILS -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="research">
+    <h2 class="text-4xl font-bold mb-12 section-header">Research Experience & Publications</h2>
+    <div class="bg-slate-900 rounded-3xl p-10">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="font-semibold text-xl">Cyber Security Awareness Survey (2024)</h3>
+          <p class="text-slate-400 mt-1">University of Kalyani • 75 university students • Average score: 15.99/26</p>
+          <p class="mt-6 text-slate-300">Designed structured survey instruments for academic & community-level data collection. Developed knowledge assessment tools to measure digital literacy & cyber security awareness. Applied quantitative & qualitative analysis to identify knowledge gaps and produce evidence-based recommendations. Published on ResearchGate.</p>
+          <a href="https://www.researchgate.net/profile/Ayan-Sarkar-11" target="_blank" class="inline-flex items-center gap-3 mt-8 text-indigo-400 hover:text-indigo-300 font-medium">
+            View Full Publication on ResearchGate <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="text-sm text-slate-400 space-y-4">
+          <p><strong>Research Interests:</strong> AI & NLP for Indian languages, Bengali computational linguistics, digital inclusion, cyber security education, AI ethics, survey methodology, EdTech.</p>
+          <p><strong>Open to:</strong> Collaborative academic research, research assistant/associate roles, AI language annotation projects, and field-based social science studies.</p>
+          <p class="pt-4">Proficient in questionnaire design, Likert-scale instruments, sampling strategy, data coding, and academic findings presentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS - ALL FROM CV -->
+  <section class="bg-slate-900 py-20" id="skills">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 section-header">Core Skills</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-800 p-8 rounded-3xl">
+          <h4 class="font-semibold text-indigo-400 mb-6 flex items-center gap-2"><i class="fas fa-robot"></i> AI & GenAI</h4>
+          <p class="text-slate-300">Google Gemini AI (P13n), Content Annotation, Agentic AI Training, Prompt Engineering, Responsible AI</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-3xl">
+          <h4 class="font-semibold text-indigo-400 mb-6 flex items-center gap-2"><i class="fas fa-chart-bar"></i> Research</h4>
+          <p class="text-slate-300">Survey Tool Design, Field Research, Knowledge Research, Data Collection & Analysis, MIS, ResearchGate</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-3xl">
+          <h4 class="font-semibold text-indigo-400 mb-6 flex items-center gap-2"><i class="fas fa-language"></i> Language & Localization</h4>
+          <p class="text-slate-300">Bengali–English Bilingual (Expert), Multilingual Content Engineering, Cultural Adaptation, Translation</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-3xl">
+          <h4 class="font-semibold text-indigo-400 mb-6 flex items-center gap-2"><i class="fas fa-chalkboard-teacher"></i> Education & Training</h4>
+          <p class="text-slate-300">Curriculum Design, Computer Fundamentals, Digital Literacy, Tally GST, HTML/CSS/Python, Soft Skills</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-3xl">
+          <h4 class="font-semibold text-indigo-400 mb-6 flex items-center gap-2"><i class="fas fa-chart-line"></i> Digital Marketing</h4>
+          <p class="text-slate-300">SEO, Meta Ads, Google Ads, Shopify, Social Media Strategy, Content Creation</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-3xl">
+          <h4 class="font-semibold text-indigo-400 mb-6 flex items-center gap-2"><i class="fas fa-tools"></i> Tools</h4>
+          <p class="text-slate-300">MS Office, Google Workspace, Canva, Photoshop, WordPress, LaTeX, AWS Cloud, Zoom</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="education">
+    <div class="grid md:grid-cols-2 gap-16">
+      <div>
+        <h2 class="text-4xl font-bold mb-8 section-header">Education</h2>
+        <div class="space-y-8 text-lg">
+          <div><strong>PG in Bengali</strong> — University of Kalyani, 2021 (GPA: 59.06%)</div>
+          <div><strong>Diploma in Engineering</strong> — WB State Council of Technical & Vocational Education, 2020 (GPA: 63.80%)</div>
+          <div><strong>BA Honours in Bengali</strong> — University of Kalyani, 2019 (GPA: 45.25%)</div>
+          <div><strong>Higher Secondary (XII)</strong> — WBCHSE, 2016 (GPA: 61.00%)</div>
+          <div><strong>Secondary / Madhyamik</strong> — WBBSE, 2014 (GPA: 50.42%)</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-4xl font-bold mb-8 section-header">Certifications</h2>
+        <ul class="space-y-4 text-sm">
+          <li class="flex gap-3"><i class="fas fa-check text-emerald-400"></i> SOAR — AI for Educators | Microsoft × Skill India (NSQF L6, 40 Hrs, Feb 2026)</li>
+          <li class="flex gap-3"><i class="fas fa-check text-emerald-400"></i> Yuva AI for All (Bengali) | NIELIT × Skill India (NSQF L2, Feb 2026)</li>
+          <li class="flex gap-3"><i class="fas fa-check text-emerald-400"></i> Unlocking AI for Everyone | Microsoft × Skill India (NSQF L2, Feb 2026)</li>
+          <li class="flex gap-3"><i class="fas fa-check text-emerald-400"></i> Ethics in the Age of Generative AI | LinkedIn Learning (Dec 2025)</li>
+          <li class="flex gap-3"><i class="fas fa-check text-emerald-400"></i> Multi-Disciplinary Survey Tool Design (Grade A) | University of Kalyani (RUSA, 2023)</li>
+          <li class="flex gap-3"><i class="fas fa-check text-emerald-400"></i> AWS Cloud Literacy | Amazon Web Services (2024)</li>
+          <li class="flex gap-3"><i class="fas fa-check text-emerald-400"></i> Cyber Security Professional Basic Course | CSC Academy & Robert de Sorbon, France (2020)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT US SECTION -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-20 bg-slate-900">
+    <div class="grid md:grid-cols-2 gap-16">
+      <div>
+        <h2 class="text-5xl font-bold mb-8 section-header">Get In Touch</h2>
+        <p class="text-xl text-slate-300 mb-10">Ready for AI annotation, GenAI training, research, or language localization opportunities worldwide.</p>
+        
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <i class="fas fa-envelope text-4xl text-indigo-400"></i>
+            <div>
+              <p class="font-medium">Email</p>
+              <a href="mailto:ayansarkar34742@outlook.com" class="text-indigo-300 hover:underline text-lg">ayansarkar34742@outlook.com</a>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <i class="fas fa-phone text-4xl text-indigo-400"></i>
+            <div>
+              <p class="font-medium">Phone / WhatsApp</p>
+              <a href="tel:+918250760951" class="text-indigo-300 hover:underline text-lg">+91 82507 60951</a>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <i class="fab fa-linkedin text-4xl text-indigo-400"></i>
+            <div>
+              <p class="font-medium">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/ayansarkar" target="_blank" class="text-indigo-300 hover:underline text-lg">linkedin.com/in/ayansarkar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <form id="contactForm" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="text" name="name" placeholder="Full Name" required class="bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none">
+            <input type="email" name="email" placeholder="Email Address" required class="bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none">
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <input type="tel" name="phone" placeholder="Phone Number" class="bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none">
+            <input type="text" name="subject" placeholder="Subject" class="bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4 focus:border-indigo-500 outline-none">
+          </div>
+          <textarea name="message" rows="6" placeholder="Your message, job opportunity or collaboration idea..." required class="w-full bg-slate-800 border border-slate-700 rounded-3xl px-6 py-4 focus:border-indigo-500 outline-none"></textarea>
+          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 py-5 rounded-3xl font-semibold text-lg">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT MODAL -->
+  <div id="contactModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
+    <div class="modal bg-slate-900 rounded-3xl max-w-lg w-full mx-4 p-8 relative">
+      <button onclick="closeContactModal()" class="absolute top-6 right-6 text-3xl text-slate-400 hover:text-white">×</button>
+      <h2 class="text-3xl font-bold mb-8 text-center">Let's Connect</h2>
+      <form id="modalForm" class="space-y-6">
+        <input type="text" name="name" placeholder="Full Name" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+        <input type="email" name="email" placeholder="Email" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+        <input type="tel" name="phone" placeholder="Phone" class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-4">
+        <textarea name="message" rows="5" placeholder="Your message..." required class="w-full bg-slate-800 border border-slate-700 rounded-3xl px-6 py-4"></textarea>
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-3xl font-semibold">Submit</button>
+      </form>
     </div>
   </div>
-</nav>
 
-<!-- HERO -->
-<section class="h-screen flex flex-col justify-center items-center text-center px-6">
-  <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-    Building AI Systems <br/> for Real-World Impact
-  </h1>
-  <p class="mt-6 max-w-xl text-gray-600 text-lg">
-    AI Language Specialist with 7+ years in GenAI, NLP, Research & Automation. Worked on Google Gemini personalization.
-  </p>
-  <div class="mt-8 flex gap-4">
-    <a href="#projects" class="px-6 py-3 bg-black text-white rounded-full">View Work</a>
-    <a href="#contact" class="px-6 py-3 border rounded-full">Contact</a>
-  </div>
-</section>
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 py-12 text-center">
+    <p class="text-slate-500">© 2026 Ayan Sarkar • Built for Global AI, Research & Localization Opportunities</p>
+  </footer>
 
-<!-- TRUST BAR -->
-<section class="text-center py-10 text-gray-500 text-sm">
-  <p>Worked with • Google Gemini Project • Government Digital Programs • SME Clients</p>
-</section>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycby_QnJX3VRMLChjlxiW3GrgO6KT9qRZohDFAm7FJSH-qqWNXDV-Wfkkaoi98IKM0uRx/exec";   // ← Replace this with your actual Google Apps Script URL
 
-<!-- PROJECTS -->
-<section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+    // Main Form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(() => { alert("✅ Thank you! Your message has been sent."); this.reset(); })
+        .catch(() => alert("❌ Error. Please email me directly."));
+    });
 
-  <div class="grid md:grid-cols-3 gap-8">
+    // Modal Form
+    document.getElementById('modalForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(() => { alert("✅ Message sent successfully!"); closeContactModal(); this.reset(); })
+        .catch(() => alert("❌ Error sending message."));
+    });
 
-    <div class="p-6 rounded-2xl shadow hover:shadow-xl transition bg-white">
-      <h3 class="text-xl font-semibold mb-3">AI Resume Analyzer</h3>
-      <p class="text-gray-600">LLM-powered resume analysis with skill extraction & job matching.</p>
-    </div>
+    function openContactModal() {
+      document.getElementById('contactModal').classList.remove('hidden');
+      document.getElementById('contactModal').classList.add('flex');
+    }
 
-    <div class="p-6 rounded-2xl shadow hover:shadow-xl transition bg-white">
-      <h3 class="text-xl font-semibold mb-3">Bengali NLP Toolkit</h3>
-      <p class="text-gray-600">Translation, sentiment analysis & multilingual AI processing.</p>
-    </div>
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.add('hidden');
+      document.getElementById('contactModal').classList.remove('flex');
+    }
 
-    <div class="p-6 rounded-2xl shadow hover:shadow-xl transition bg-white">
-      <h3 class="text-xl font-semibold mb-3">AI Social Automation</h3>
-      <p class="text-gray-600">Content generation & automation system for social media growth.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="bg-gray-50 py-20 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10">Core Expertise</h2>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
-      <p>AI & GenAI</p>
-      <p>Prompt Engineering</p>
-      <p>Data Annotation</p>
-      <p>NLP & Localization</p>
-      <p>Research & Survey Design</p>
-      <p>Digital Marketing</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="py-20 text-center">
-  <h2 class="text-3xl font-bold">Let’s Build Something Global</h2>
-  <p class="text-gray-600 mt-4">Available for remote roles, freelance & AI collaborations</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="bg-black text-white py-16 text-center">
-  <h2 class="text-2xl font-bold mb-4">Contact</h2>
-  <p>Email: ayansarkar34742@outlook.com</p>
-  <p>Phone: +91 8250760951</p>
-  <p class="mt-2 text-gray-400">LinkedIn: linkedin.com/in/ayansarkar</p>
-</section>
-
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
